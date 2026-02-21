@@ -43,6 +43,7 @@ Thema に基づいた **Thema主題（+クォリファイア）コード候補**
 * [Themaコード提案（お試し用）- NotebookLM](https://notebooklm.google.com/notebook/fb0df831-96df-4cbf-828b-5101585fea45)
 
 
+### 利用マニュアル
 
 ⓪JPROの登録システムで、ISBNで検索するなどして、書誌を一点だけ表示し、「Excel出力(紙)」をクリックし、手元に書誌情報をダウンロードします
 

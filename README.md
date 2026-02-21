@@ -27,7 +27,7 @@ Thema に基づいた **Thema主題（+クォリファイア）コード候補**
 
 ⓪JPROの登録システムで、ISBNで検索するなどして、書誌を一点だけ表示し、「Excel出力(紙)」をクリックし、手元に書誌情報をダウンロードします
 
-<img src="assets/0. JPROから書誌情報ダウンロード.png" width="600">
+<img src="assets/0. JPRO-Download.png" width="600">
 
 
 

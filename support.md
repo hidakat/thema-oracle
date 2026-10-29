@@ -2,9 +2,9 @@
 
 [総合案内](README.md) · [デスクトップ版](desktop.md)
 
-Thema Oracleの一般的な質問・不具合は、既存の [GitHub Issues](https://github.com/hidakat/thema-oracle/issues) で受け付ける窓口案です。投稿にはGitHubアカウントが必要です。管理アカウントは [hidakat](https://github.com/hidakat) です。
+Thema Oracleの一般的な質問・不具合は、既存の [GitHub Issues](https://github.com/hidakat/thema-oracle/issues) で受け付けます。投稿にはGitHubアカウントが必要です。公開者は日高崇（JPO特別委員）、管理アカウントは [hidakat](https://github.com/hidakat) です。
 
-**Issuesの投稿は公開されます。未公開書誌、XLSX原本、画面全体の画像、認証情報、個人情報は投稿しないでください。** 非公開の相談窓口は確認中です。非公開情報を含む相談は、窓口が案内されるまで投稿を控えてください。
+**Issuesの投稿は公開されます。未公開書誌、XLSX原本、画面全体の画像、認証情報、個人情報は投稿しないでください。** 非公開の相談は [Xの @hidakat](https://x.com/hidakat) へDMをお送りください。公開者から、誰でもDMを送信できる設定にしたとの確認を得ています。Xの利用には同サービスのアカウント・利用条件が適用されます。DMにも認証情報や共有権限のない書誌は送らないでください。
 
 ## 報告に含める情報
 
@@ -17,4 +17,4 @@ Thema Oracleの一般的な質問・不具合は、既存の [GitHub Issues](htt
 
 JPROのアカウント・権限・サービス障害はJPROの窓口へ、OpenAIアカウント・課金・アプリ自体の問題はOpenAIの窓口へお問い合わせください。
 
-対応時間、非公開窓口、問い合わせ情報の保管・削除方針は公開者確認待ちです。このページは審査提出に向けた草案です。
+問い合わせ情報は対応目的だけに使用します。評価・学習への転用や第三者共有には別途同意を得ます。問い合わせ情報の保管期間・削除対応は公開者確認待ちです。詳細は [プライバシーポリシー案](privacy.md) を参照してください。

@@ -1,6 +1,6 @@
 # Thema Oracle デスクトップアプリ版
 
-[総合案内](README.md) · [問い合わせ](support.md) · [プライバシー案](privacy.md) · [利用条件案](terms.md)
+[総合案内](README.md) · [問い合わせ](support.md) · [プライバシー](privacy.md) · [利用条件](terms.md)
 
 **公開審査の提出準備中です。公開ディレクトリへの掲載・審査承認・一般配布はまだ完了していません。** パッケージ識別名は `thema-oracle-jpro-poc` です。
 

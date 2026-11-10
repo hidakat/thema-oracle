@@ -8,8 +8,8 @@
 
 | ファイル | 用途・条件 |
 | --- | --- |
-| `thema-oracle-local-1.6.1.zip` | アプリ用。ローカルのファイル・シェル操作、Python 3.10以上、pydanticの導入が必要。外部MCPへの接続は不要 |
-| `thema-oracle-xlsx-1.5.3.zip` | Web用。JPROから一冊分のXLSXを手動で取得し添付。`https://thema.period3.to/thema-oracle/mcp/` への接続が必要 |
+| [`thema-oracle-desktop-1.6.1.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10/thema-oracle-desktop-1.6.1.zip) | アプリ用。ローカルのファイル・シェル操作、Python 3.10以上、pydanticの導入が必要。外部MCPへの接続は不要 |
+| [`thema-oracle-web-1.5.3.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10/thema-oracle-web-1.5.3.zip) | Web用。JPROから一冊分のXLSXを手動で取得し添付。`https://thema.period3.to/thema-oracle/mcp/` への接続が必要 |
 
 両者は別パッケージなので版番号が異なります。アプリを利用しているだけでローカル操作機能が使えるとは限りません。必要な機能がない場合は停止し、Web用を選んでください。別アカウント・料金プラン・OSの組合せでの動作を保証するものではありません。
 

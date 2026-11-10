@@ -2,7 +2,7 @@
 
 [総合案内](README.md) · [問い合わせ](support.md) · [プライバシー](privacy.md) · [利用条件](terms.md)
 
-**公開審査の提出準備中です。公開ディレクトリへの掲載・審査承認・一般配布はまだ完了していません。** パッケージ識別名は `thema-oracle-jpro-poc` です。
+**このページは旧 `thema-oracle-jpro-poc` の説明です。現在のアプリ用は `thema-oracle-local` です。[現在のZIPと導入手順](plugin-install.md) を参照してください。** 以下は旧版の記録として残しています。OpenAI公開ディレクトリへの掲載を意味しません。
 
 ## 公開者・料金・提供地域
 

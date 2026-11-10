@@ -4,12 +4,12 @@
 
 ## 配布物
 
-[配布ページ](https://github.com/hidakat/thema-oracle/releases/tag/plugins-2026-11-10-icon) の Assets から、次のどちらかを取得します。GitHubが自動表示する Source code (zip) はインストール用ではありません。
+[配布ページ](https://github.com/hidakat/thema-oracle/releases/tag/plugins-2026-11-10-desktop164) の Assets から、次のどちらかを取得します。GitHubが自動表示する Source code (zip) はインストール用ではありません。
 
 | ファイル | 用途・条件 |
 | --- | --- |
-| [`thema-oracle-desktop-1.6.3.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10-icon/thema-oracle-desktop-1.6.3.zip) | アプリ用。ローカルのファイル・シェル操作、Python 3.10以上、pydanticの導入が必要。外部MCPへの接続は不要 |
-| [`thema-oracle-web-1.5.5.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10-icon/thema-oracle-web-1.5.5.zip) | Web用。JPROから一冊分のXLSXを手動で取得し添付。`https://thema.period3.to/thema-oracle/mcp/` への接続が必要 |
+| [`thema-oracle-desktop-1.6.4.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10-desktop164/thema-oracle-desktop-1.6.4.zip) | アプリ用。ローカルのファイル・シェル操作、Python 3.10以上、pydanticの導入が必要。外部MCPへの接続は不要 |
+| [`thema-oracle-web-1.5.5.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10-desktop164/thema-oracle-web-1.5.5.zip) | Web用。JPROから一冊分のXLSXを手動で取得し添付。`https://thema.period3.to/thema-oracle/mcp/` への接続が必要 |
 
 両者は別パッケージなので版番号が異なります。アプリを利用しているだけでローカル操作機能が使えるとは限りません。必要な機能がない場合は停止し、Web用を選んでください。別アカウント・料金プラン・OSの組合せでの動作を保証するものではありません。
 
@@ -65,3 +65,9 @@ JPROへの転記は対象コードへの明示承認後のみです。**Plugin�
 開発原本とZIP生成処理は開発用 `thema-oracle-automata` リポジトリで管理します。この公開リポジトリは配布案内と完成ZIPの置き場所です。個人のOpenAIアカウント内に作ったPluginを配布元にする方式は使用しません。
 
 アプリ用ZIPはEDItEURのThema 1.6辞書とライセンスを同梱しています。第三者資料の条件はZIP内 `THIRD_PARTY.md` と `licenses/` を確認してください。公開案内文書のライセンスが、同梱資料へ一律に適用されるわけではありません。
+
+## アプリ版1.6.4の確認範囲
+
+macOSのテスト用プロジェクトの新規チャットで、ローカル配布元から導入した1.6.4のスキル認識、XLSX読取、推論、監査JSON生成までを確認しました。初回案・最終案・書誌原文、サービス名ChatGPT、実行環境codex_app、利用者申告Proを保持しています。外部MCP・TQM送信・JPRO操作は行っていません。
+
+スキルパス解決と依存取得で初回失敗がありましたが、自動復旧して追加の再開指示なしで完了しました。配布ZIPはこの試験のインストール内容と一致します。ZIPアップロード方式・別アカウント・他OSの受入完了を意味しません。Web版1.5.5は変更ありません。

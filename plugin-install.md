@@ -1,15 +1,15 @@
 # Thema Oracle: ZIPの選択と導入
 
-2026-11-10 / 試用配布
+2026-11-11 / 試用配布
 
 ## 配布物
 
-[配布ページ](https://github.com/hidakat/thema-oracle/releases/tag/plugins-2026-11-10-desktop164) の Assets から、次のどちらかを取得します。GitHubが自動表示する Source code (zip) はインストール用ではありません。
+[配布ページ](https://github.com/hidakat/thema-oracle/releases/tag/plugins-2026-11-11-desktop172) の Assets から、次のどちらかを取得します。GitHubが自動表示する Source code (zip) はインストール用ではありません。
 
 | ファイル | 用途・条件 |
 | --- | --- |
-| [`thema-oracle-desktop-1.6.4.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10-desktop164/thema-oracle-desktop-1.6.4.zip) | アプリ用。ローカルのファイル・シェル操作、Python 3.10以上、pydanticの導入が必要。外部MCPへの接続は不要 |
-| [`thema-oracle-web-1.5.5.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10-desktop164/thema-oracle-web-1.5.5.zip) | Web用。JPROから一冊分のXLSXを手動で取得し添付。`https://thema.period3.to/thema-oracle/mcp/` への接続が必要 |
+| [`thema-oracle-desktop-1.7.2.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-11-desktop172/thema-oracle-desktop-1.7.2.zip) | アプリ用。ローカルのファイル・シェル操作、Python 3.10以上、pydanticの導入が必要。外部MCPへの接続は不要 |
+| [`thema-oracle-web-1.5.5.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-11-desktop172/thema-oracle-web-1.5.5.zip) | Web用。JPROから一冊分のXLSXを手動で取得し添付。`https://thema.period3.to/thema-oracle/mcp/` への接続が必要 |
 
 両者は別パッケージなので版番号が異なります。アプリを利用しているだけでローカル操作機能が使えるとは限りません。必要な機能がない場合は停止し、Web用を選んでください。別アカウント・料金プラン・OSの組合せでの動作を保証するものではありません。
 
@@ -43,7 +43,7 @@ ZIPには利用者向けREADME.mdも同梱しています。READMEが設定画�
 
 ISBN・書名が原本と一致し、コードの辞書照合・検査が実行されたことを確認します。原本XLSXの行削除などは不要です。推測だけで回答した場合は動作確認完了とは扱いません。
 
-必要な場合だけ「初回推論と最終案を保持した監査用JSONを出力してください」と依頼します。JSONは [TQM取込画面](https://thema.period3.to/oracle-automata/review/tqm/import/) で、自分に発行された監査用アカウントから内容確認後に登録します。Plugin導入とTQMアカウント発行は別です。
+必要な場合だけ「初回推論と最終案を保持した監査用JSONを出力してください」と依頼します。アプリ版で直接登録したい場合は「この最終案をTQMに登録してください」と依頼し、本人のブラウザでログイン・所属確認・連携許可を行います。登録後に保存内容との一致を確認します。直接登録を利用しない場合、JSONは [TQM取込画面](https://thema.period3.to/oracle-automata/review/tqm/import/) で、自分に発行された監査用アカウントから内容確認後に登録します。Plugin導入とTQMアカウント発行は別です。
 
 JPROへの転記は対象コードへの明示承認後のみです。**PluginはJPROの保存・送信・確定を行いません。** 最終保存は利用者が行います。TQM登録はJPRO登録とは別です。
 
@@ -66,8 +66,13 @@ JPROへの転記は対象コードへの明示承認後のみです。**Plugin�
 
 アプリ用ZIPはEDItEURのThema 1.6辞書とライセンスを同梱しています。第三者資料の条件はZIP内 `THIRD_PARTY.md` と `licenses/` を確認してください。公開案内文書のライセンスが、同梱資料へ一律に適用されるわけではありません。
 
-## アプリ版1.6.4の確認範囲
+## 検証した範囲
 
 macOSのテスト用プロジェクトの新規チャットで、ローカル配布元から導入した1.6.4のスキル認識、XLSX読取、推論、監査JSON生成までを確認しました。初回案・最終案・書誌原文、サービス名ChatGPT、実行環境codex_app、利用者申告Proを保持しています。外部MCP・TQM送信・JPRO操作は行っていません。
 
-スキルパス解決と依存取得で初回失敗がありましたが、自動復旧して追加の再開指示なしで完了しました。配布ZIPはこの試験のインストール内容と一致します。ZIPアップロード方式・別アカウント・他OSの受入完了を意味しません。Web版1.5.5は変更ありません。
+スキルパス解決と依存取得で初回失敗がありましたが、自動復旧して追加の再開指示なしで完了しました。この試験は1.6.4時点の結果です。ZIPアップロード方式・別アカウント・他OSの受入完了を意味しません。Web版1.5.5は変更ありません。
+
+
+アプリ版1.7.2では、本人のブラウザでTQMへログインし連携を許可した後、ローカルPythonからTQMのHTTPS APIへ監査JSONを直接登録します。所属・登録権限を確認し、利用者が登録を明示依頼した場合だけ送信します。外部MCPは使いません。認証の折り返しには端末の127.0.0.1:18764を使用します。パスワードをチャットへ貼り付ける必要はありません。
+
+macOSで実際に本人認証から直接登録まで成功し、初回案・最終案・書誌原文を含む保存JSON全体の一致と、ChatGPT／Pro／user_reportの保持を確認しました。登録試験後に認証失効処理を修正し、1.7.2に反映しています。失効修正はローカルのOAuth回帰テストで確認済みです。1.7.2全体の新規XLSXからの再試験や、他OS・別アカウントでの直接登録は未検証です。

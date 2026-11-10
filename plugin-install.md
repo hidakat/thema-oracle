@@ -4,12 +4,12 @@
 
 ## 配布物
 
-[配布ページ](https://github.com/hidakat/thema-oracle/releases/tag/plugins-2026-11-10) の Assets から、次のどちらかを取得します。GitHubが自動表示する Source code (zip) はインストール用ではありません。
+[配布ページ](https://github.com/hidakat/thema-oracle/releases/tag/plugins-2026-11-10-usage) の Assets から、次のどちらかを取得します。GitHubが自動表示する Source code (zip) はインストール用ではありません。
 
 | ファイル | 用途・条件 |
 | --- | --- |
-| [`thema-oracle-desktop-1.6.1.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10/thema-oracle-desktop-1.6.1.zip) | アプリ用。ローカルのファイル・シェル操作、Python 3.10以上、pydanticの導入が必要。外部MCPへの接続は不要 |
-| [`thema-oracle-web-1.5.3.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10/thema-oracle-web-1.5.3.zip) | Web用。JPROから一冊分のXLSXを手動で取得し添付。`https://thema.period3.to/thema-oracle/mcp/` への接続が必要 |
+| [`thema-oracle-desktop-1.6.2.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10-usage/thema-oracle-desktop-1.6.2.zip) | アプリ用。ローカルのファイル・シェル操作、Python 3.10以上、pydanticの導入が必要。外部MCPへの接続は不要 |
+| [`thema-oracle-web-1.5.4.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-10-usage/thema-oracle-web-1.5.4.zip) | Web用。JPROから一冊分のXLSXを手動で取得し添付。`https://thema.period3.to/thema-oracle/mcp/` への接続が必要 |
 
 両者は別パッケージなので版番号が異なります。アプリを利用しているだけでローカル操作機能が使えるとは限りません。必要な機能がない場合は停止し、Web用を選んでください。別アカウント・料金プラン・OSの組合せでの動作を保証するものではありません。
 
@@ -22,6 +22,22 @@
 5. 新しいチャットで今回のPluginを選び、「添付した一冊分のJPRO XLSXからThemaを提案してください」と依頼します。
 
 アプリ用の初回は専用Python環境と依存ライブラリの準備が必要です。利用者の許可なくOS全体の設定を変更する必要はありません。ブラウザ操作が利用できる場合のみ、本人のJPROログインで取得や転記を依頼できます。ブラウザの種類は固定しません。
+
+## 使える機能と依頼例
+
+アプリ版・Web版とも、表示名は **Thema Oracle** です。説明の「アプリ版／Web版」と版番号で区別してください。内部IDはそれぞれ `thema-oracle-local` / `thema-oracle-xlsx` のままです。
+
+一冊の書誌から中心主題を整理し、最終候補・追加代替コード・採用理由を示します。辞書照合、既存Themaとの比較、明示依頼による監査JSON出力を支援します。
+
+新規チャットでThema Oracleを選び、一冊分のJPRO XLSXを添付して依頼します。
+
+- 提案：「このXLSXからThemaを提案してください」
+- 提案と監査記録：「Themaを提案し、初回案・最終案と書誌原文を保持した監査用JSONを出力してください。利用プランはProです」（自分のプラン名に置き換えてください）
+- TQM登録：「この最終案をTQMに登録してください」。本人の認証・権限と利用可能な操作経路が必要です。利用できない場合はJSONの手動取込を使います。
+
+料金プランは利用者申告として記録します。モデルなど確認できない条件は推測しません。技術的なスキル識別名は、アプリ版 `thema-oracle-local`、Web版 `thema-oracle-inspection` です。スキルの選択表示は環境によって異なります。
+
+ZIPには利用者向けREADME.mdも同梱しています。READMEが設定画面に自動表示されることは前提にしていません。
 
 ## 一冊目の確認と任意のTQM登録
 

@@ -1,14 +1,14 @@
 # Thema Oracle: ZIPの選択と導入
 
-2026-11-12 / アプリ版1.8.2・Web版1.5.10
+2026-11-12 / アプリ版1.8.3・Web版1.5.10
 
 ## 配布物
 
-[配布ページ](https://github.com/hidakat/thema-oracle/releases/tag/plugins-2026-11-12-web1510) の Assets から、次のどちらかを取得します。GitHubが自動表示する Source code (zip) はインストール用ではありません。
+以下の用途別リンクからZIPを取得します（アプリ版とWeb版は別のReleaseです）。GitHubが自動表示する Source code (zip) はインストール用ではありません。
 
 | ファイル | 用途・条件 |
 | --- | --- |
-| [`thema-oracle-desktop-1.8.2.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-12-web159/thema-oracle-desktop-1.8.2.zip) | アプリ用。ローカルのファイル・シェル操作、Python 3.10以上（3.11/3.12推奨）、pydanticの導入が必要。外部MCPへの接続は不要 |
+| [`thema-oracle-desktop-1.8.3.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-12-desktop183/thema-oracle-desktop-1.8.3.zip) | アプリ用。ローカルのファイル・シェル操作、Python・pydanticを許可後に専用領域へ準備。自動準備はCPython 3.11/3.12が対象。外部MCPへの接続は不要 |
 | [`thema-oracle-web-1.5.10.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-12-web1510/thema-oracle-web-1.5.10.zip) | Web用。JPROから一冊分のXLSXを手動で取得し添付。`https://thema.period3.to/thema-oracle/mcp/` への接続が必要 |
 
 両者は別パッケージなので版番号が異なります。アプリを利用しているだけでローカル操作機能が使えるとは限りません。必要な機能がない場合は停止し、Web用を選んでください。別アカウント・料金プラン・OSの組合せでの動作を保証するものではありません。
@@ -21,7 +21,13 @@
 4. 旧版が残る場合は旧版を無効にし、同じチャットで新旧を同時に呼ばないようにします。自動的な置換や更新は保証していません。
 5. インストール後の「チャットで試す」から新しいチャットを開き、今回のPluginを選んで、「添付した一冊分のJPRO XLSXからThemaを提案してください」と依頼します。
 
-アプリ用の初回は専用Python環境と依存ライブラリの準備が必要です。利用者の許可なくOS全体の設定を変更する必要はありません。ブラウザ操作が利用できる場合のみ、本人のJPROログインで取得や転記を依頼できます。ブラウザの種類は固定しません。
+アプリ版1.8.3では、初回に「Thema Oracleの初回の導入確認をしてください」と依頼します。既存Pythonと専用環境を確認し、不足時は取得元・通信・配置先・概算容量を説明します。確認だけでは取得せず、明示許可後にPython本体と固定依存を専用領域へ準備します。拒否・社内制限・権限不足なら停止します。OS全体、PATH、既存Python、Windows実行ポリシーは変更しません。
+
+既定の配置先はmacOSの `~/Library/Application Support/Thema Oracle/runtime-v1`、Windowsの `%LOCALAPPDATA%\Thema Oracle\runtime-v1` です。Python不在時は固定版Astral uvとCPythonを公式配布元から、依存をPyPIから取得し、ハッシュを検証します。通信30〜100MB、空き1GBが目安です。書誌や監査JSONはこの領域へ移しません。通常利用時は通信しない環境確認で専用Pythonを選び、再利用します。詳細はZIP内の `skills/thema-oracle-local/references/first-run-setup.md` を参照してください。
+
+**Windows（x64/ARM64）・macOS Intelの実機検証は未実施です。** Windowsの実行ポリシーが拒否する場合は迂回せず、社内担当者の初回支援を利用してください。
+
+ブラウザ操作が利用できる場合のみ、本人のJPROログインで取得や転記を依頼できます。ブラウザの種類は固定しません。
 
 ## 使える機能と依頼例
 
@@ -85,6 +91,9 @@ Web版でTQMへ直接登録するには、読取用接続とは別に、本人�
 アプリ用ZIPはEDItEURのThema 1.6辞書とライセンスを同梱しています。第三者資料の条件はZIP内 `THIRD_PARTY.md` と `licenses/` を確認してください。公開案内文書のライセンスが、同梱資料へ一律に適用されるわけではありません。
 
 ## 検証した範囲
+
+アプリ版1.8.3は公開1.8.2へ初回準備だけを統合しました。推論・監査・JPRO処理、共通ナレッジは1.8.2と同一です。macOS arm64で準備済みCPython3.12.16を正常性確認して再利用し、正式ZIPの通常CLIでXLSX読取・辞書検索・コード検査・初回/対話後の監査JSON生成までをネットワーク禁止下で確認しました。関連20件の検証とZIP内全チェックサム確認を実施。Python本体取得は既存候補時のMac arm64試験で成功済みですが、今回再取得はしていません。正式1.8.3による新規チャットのモデル推論・本番TQM登録、Windows・Intelの実機試験は未実施です。
+
 
 Web版1.5.10は、Freeプランの新規チャットで書誌テキストから初回カードを表示し、通常の補足で対話後の案を作成しました。カード外で候補・根拠が再掲されないことを確認しました。初回本文や参照キーを利用者が再提示せず、監査JSONをダウンロードできました。途中で見つかった対話後の案の原文欠落を修正し、同じ会話から再出力した実ファイルで、初回カード本文・固定初回記録・JSONの完全一致と両案の原文保持を確認しました。隔離したTQM受信側への取込・読戻しも成功しています。
 

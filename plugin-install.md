@@ -1,15 +1,15 @@
 # Thema Oracle: ZIPの選択と導入
 
-2026-11-11 / アプリ版1.8.1 公開・テスト開始版
+2026-11-11 / アプリ版1.8.2・Web版1.5.6
 
 ## 配布物
 
-[配布ページ](https://github.com/hidakat/thema-oracle/releases/tag/plugins-2026-11-11-desktop181) の Assets から、次のどちらかを取得します。GitHubが自動表示する Source code (zip) はインストール用ではありません。
+[配布ページ](https://github.com/hidakat/thema-oracle/releases/tag/plugins-2026-11-11-jpro-prompts) の Assets から、次のどちらかを取得します。GitHubが自動表示する Source code (zip) はインストール用ではありません。
 
 | ファイル | 用途・条件 |
 | --- | --- |
-| [`thema-oracle-desktop-1.8.1.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-11-desktop181/thema-oracle-desktop-1.8.1.zip) | アプリ用。ローカルのファイル・シェル操作、Python 3.10以上（3.11/3.12推奨）、pydanticの導入が必要。外部MCPへの接続は不要 |
-| [`thema-oracle-web-1.5.5.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-11-desktop181/thema-oracle-web-1.5.5.zip) | Web用。JPROから一冊分のXLSXを手動で取得し添付。`https://thema.period3.to/thema-oracle/mcp/` への接続が必要 |
+| [`thema-oracle-desktop-1.8.2.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-11-jpro-prompts/thema-oracle-desktop-1.8.2.zip) | アプリ用。ローカルのファイル・シェル操作、Python 3.10以上（3.11/3.12推奨）、pydanticの導入が必要。外部MCPへの接続は不要 |
+| [`thema-oracle-web-1.5.6.zip`](https://github.com/hidakat/thema-oracle/releases/download/plugins-2026-11-11-jpro-prompts/thema-oracle-web-1.5.6.zip) | Web用。JPROから一冊分のXLSXを手動で取得し添付。`https://thema.period3.to/thema-oracle/mcp/` への接続が必要 |
 
 両者は別パッケージなので版番号が異なります。アプリを利用しているだけでローカル操作機能が使えるとは限りません。必要な機能がない場合は停止し、Web用を選んでください。別アカウント・料金プラン・OSの組合せでの動作を保証するものではありません。
 
@@ -45,7 +45,15 @@ ISBN・書名が原本と一致し、コードの辞書照合・検査が実行�
 
 必要な場合だけ「実際の提案経緯と書誌原文を保持した監査用JSONを出力してください」と依頼します。アプリ版で直接登録したい場合は「この提案をTQM（監査記録）に登録してください」と依頼し、本人のブラウザでログイン・所属確認・連携許可を行います。登録後に保存内容との一致を確認します。直接登録を利用しない場合、JSONは [TQM取込画面](https://thema.period3.to/oracle-automata/review/tqm/import/) で、自分に発行された監査用アカウントから内容確認後に登録します。Plugin導入とTQMアカウント発行は別です。
 
-JPROへの転記は対象コードへの明示承認後のみです。**PluginはJPROの保存・送信・確定を行いません。** 最終保存は利用者が行います。TQM登録はJPRO登録とは別です。
+同じチャットで対象書誌と採用する案が明確なときに使います。TQM登録はJPRO登録とは別です。
+
+### アプリ版
+
+> この提案を承認します。JPRO Webの「BooksPRO修正」画面への転記をお願いします。転記前に、対象のISBN・書名、承認したコード、既存値との全欄の差分を示し、私の確認を待ってください。既存値の変更や削除がある場合は、私がその差分の上書き・削除を明示的に承認してから入力してください。入力後は画面を再読取し、承認した値と一致することを確認してください。保存・送信・確定の前で止めてください。最終保存は私が行います。
+
+### Web版
+
+> この提案を承認します。私がJPRO Webの「BooksPRO修正」画面に手入力できるよう、対象のISBN・書名と、主分類1欄・追加分類3欄・クオリファイアー3欄に入力するコードを欄順に示してください。入力値がない欄は「空欄」と記してください。添付XLSXに既存値があれば変更前と変更後を示し、変更・削除する欄が分かるようにしてください。既存値が確認できない場合はその旨を示してください。現在の画面との照合、入力、保存は私が行います。
 
 ## データの行き先
 
@@ -76,4 +84,4 @@ JPROへの転記は対象コードへの明示承認後のみです。**Plugin�
 
 本人認証は同じ端末の既定ブラウザを開き、開かない場合のリンクも案内します。10分以内にログイン・所属確認・連携許可を行ってください。折り返しには127.0.0.1:18764を使います。パスワードをチャットへ貼り付ける必要はありません。
 
-Python 3.15では依存導入失敗があり、3.11または3.12を推奨します。別アカウント・Windows等の他OS・ZIPアップロード経路・全分野の推論品質を一括して保証するものではありません。JPROでの実画面操作は今回の試験対象外です。Web版1.5.5は従来の公開ZIPを変更せず併載しており、今回のアプリ版の改善を含みません。
+Python 3.15では依存導入失敗があり、3.11または3.12を推奨します。別アカウント・Windows等の他OS・ZIPアップロード経路・全分野の推論品質を一括して保証するものではありません。JPROでの実画面操作は今回の試験対象外です。両版の新版では、JPROで提案を採用するときの説明を更新しました。

@@ -24,7 +24,7 @@
 - [デスクトップ版のプライバシーポリシー](privacy.md)
 - [デスクトップ版の利用条件](terms.md)
 
-配布ZIPは [GitHub Releases](https://github.com/hidakat/thema-oracle/releases/tag/plugins-2026-11-11-desktop180) から取得できます。OpenAIの公開ディレクトリへの掲載とは別の、各自がZIPをアップロードする方式です。別アカウントでの導入確認は継続中です。
+配布ZIPは [GitHub Releases](https://github.com/hidakat/thema-oracle/releases/tag/plugins-2026-11-11-desktop181) から取得できます。OpenAIの公開ディレクトリへの掲載とは別の、各自がZIPをアップロードする方式です。別アカウントでの導入確認は継続中です。
 
 ## 文書のライセンス
 
